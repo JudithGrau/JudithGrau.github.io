@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: 'Open Sans', sans-serif;   
+}
+:root {
+    --colorNegro:rgba(0, 0, 0, 0.5);
+    --colorGrisOscuro: #353a40;
+    --colorGrisAzulado:#1d3947;
+    --colorGrisClaro: #efeeee;
+    --colorBlanco: white;
+    --colorVerde: #157347;
+}
+
+/* header */
+.navbar {
+    background-color: var(--colorGrisOscuro);
+}
+
+.nav-item:hover{
+    color: var(--colorBlanco)!important;
+}
+
+/* main */
+.carousel-item>img{
+    height: 90vh;
+    object-fit: cover;
+}
+
+.text-carousel{
+    background-color: var(--colorNegro);
+    height: 100%;
+    width: 100%;
+    
+}
+
+.text-carousel-descripcion{
+    font-size: larger;
+}
+
+.text-carousel>div{
+    width: 43vw;
+    bottom: 10rem;
+    right: 6rem;
+    
+}
+
+.card-text{
+    font-size: small;
+}
+
+.banner{
+    height: 60vh;
+}
+
+.banner-img{
+    background-image: url('../img/honolulu.jpg');
+    background-size: cover;
+}
+#lugarYFecha{
+    background-color: var(--colorGrisOscuro);
+}
+.card:hover{
+    bottom: 20px;
+}
+
+.card-ticket{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 30%;
+    border: 2px solid ;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: space-evenly;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.card-ticket:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+    background-color:rgb(226, 220, 209);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+}
+
+.btn-delete, .btn-resumen,.btn-submit{
+    background-color: var(--colorVerde)!important;
+}
+
+/* footer  */
+.footer{
+    font-size: 0.9rem;
+    background-image: linear-gradient(to right, var(--colorGrisAzulado) , #2c5063);
+}
+.footer>ul>li{
+    list-style: none;
+    color: var(--colorGrisClaro);
+    padding-left: 3rem;
+}
+
+.footer>ul>li>a {
+    text-decoration: none;
+    color: white;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+.footer>ul>li>a:hover {
+    color: var(--colorBlanco)!important;
+    font-size: medium;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+@media (max-width: 450px) {
+    
+    .text-carousel>div{
+        width: 80vw;
+        bottom: 10rem;
+        right: 6rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: smaller;
+        
+    }
+
+    .card{
+        margin-bottom: 2rem;
+    }
+
+    #lugarYFecha{
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    #lugarYFecha>div{
+        width: 100vw !important;
+        text-align: center;
+    }
+    .banner-img{
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: revert;
+    }
+    #formulario{
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    #formulario-form{
+        width: 90vw !important;
+    }
+
+    .footer{
+        height: auto;
+    }
+    .footer>ul{
+        display: flex;
+        flex-flow: column wrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+    .footer>ul>li{
+        padding: 1rem  0;
+    }
+}
+@media (max-width: 768px) {
+    #lugarYFecha{
+        flex-direction: column !important;
+        height: auto;
+    }
+    #lugarYFecha>div{
+        width: 100% !important;
+        text-align: center;
+    }
+    .banner-img{
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: revert;
+    }
+    .text-carousel>div{
+        width: 50vw;
+        bottom: 5rem;
+        right: 3rem;
+    }
+    .footer>ul{
+        display: flex;
+        width: 100%;
+        flex-flow: column wrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+}
